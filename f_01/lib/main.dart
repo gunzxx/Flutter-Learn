@@ -13,32 +13,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Latihan row column"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text("Hello 1"),
-            const Text("Hello 2"),
-            const Text("Hello 3"),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  color: Colors.blueAccent,
-                  child: const Text("Hello 4"),
-                ),
-                Container(
-                  color: Colors.greenAccent,
-                  child: const Text("Hello 5"),
-                ),
-                Container(
-                  color: Colors.redAccent,
-                  child: const Text("Hello 6"),
-                ),
-              ],
-            )
-          ],
+        body: Container(
+          color: Colors.amber,
+          margin: const EdgeInsets.all(10),
+          // padding: EdgeInsets.only(left: 20, right: 15,bottom:25),
+          padding: const EdgeInsets.fromLTRB(15, 20, 25, 30),
+          child: Container(
+            // color: Colors.red,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+              gradient: LinearGradient(
+                // begin: Alignment.topLeft,
+                // end: Alignment.bottomRight,
+                begin: Alignment(-1, 1),
+                end: Alignment(1, -1),
+                colors: <Color>[
+                  Colors.blue,
+                  Colors.green,
+                ],
+              ),
+              // color: Colors.red,
+            ),
+          ),
         ),
       ),
     );
