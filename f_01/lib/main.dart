@@ -2,50 +2,40 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
+const String title = "Text Style";
+
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-const Text title = Text("Anonymous Method");
-
-class _MyAppState extends State<MyApp> {
-  String message = 'Tombol belum ditekan';
-
-  void tekanTombol() {
-    setState(() {
-      message = "Tombol sudah ditekan";
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //     colorScheme: ColorScheme.fromSwatch(
-      //   primarySwatch: Colors.black,
-      // )),
       home: Scaffold(
         appBar: AppBar(
-          title: title,
+          // titleTextStyle: TextStyle(
+          //     // fontFamily: "Poppins",
+          //     // fontSize: 24,
+          //     // fontWeight: FontWeight.w500,
+          //     ),
+          title: Text(title),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(message),
-              ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    message = "Tombol sudah ditekan";
-                  });
-                },
-                child: Text("Push here"),
-              )
-            ],
+          child: Text(
+            "Ini adalah text",
+            style: TextStyle(
+              fontFamily: "Poppins",
+              fontWeight: FontWeight.bold,
+              fontSize: 32,
+              fontStyle: FontStyle.italic,
+              decoration: TextDecoration.combine([
+                TextDecoration.overline,
+                TextDecoration.underline,
+              ]),
+              decorationColor: Colors.grey,
+              decorationThickness: 5,
+              decorationStyle: TextDecorationStyle.wavy,
+            ),
           ),
         ),
       ),
