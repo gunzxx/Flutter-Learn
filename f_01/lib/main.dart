@@ -17,24 +17,24 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Hello 1"),
-            Text("Hello 2"),
-            Text("Hello 3"),
+            const Text("Hello 1"),
+            const Text("Hello 2"),
+            const Text("Hello 3"),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  child: Text("Hello 4"),
                   color: Colors.blueAccent,
+                  child: const Text("Hello 4"),
                 ),
                 Container(
-                  child: Text("Hello 5"),
                   color: Colors.greenAccent,
+                  child: const Text("Hello 5"),
                 ),
                 Container(
-                  child: Text("Hello 6"),
                   color: Colors.redAccent,
+                  child: const Text("Hello 6"),
                 ),
               ],
             )
