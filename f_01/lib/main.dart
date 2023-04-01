@@ -12,7 +12,9 @@ class MyApp extends StatefulWidget {
 const Text title = Text("List dan ListView");
 
 class _MyAppState extends State<MyApp> {
-  List<Widget> widgets = [];
+  List<Widget> widgets = [
+    // Text("Data kosong"),
+  ];
   int counter = 1;
 
   @override
@@ -27,6 +29,7 @@ class _MyAppState extends State<MyApp> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 ElevatedButton(
                     onPressed: () {
@@ -38,6 +41,14 @@ class _MyAppState extends State<MyApp> {
                     },
                     child: const Text("tambah data")),
                 ElevatedButton(
+                    onLongPress: () {
+                      setState(() {
+                        if (widgets.isNotEmpty) {
+                          widgets = [];
+                          counter = 1;
+                        }
+                      });
+                    },
                     onPressed: () {
                       setState(() {
                         if (widgets.isNotEmpty) {
@@ -47,6 +58,16 @@ class _MyAppState extends State<MyApp> {
                       });
                     },
                     child: const Text("hapus data")),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (widgets.isNotEmpty) {
+                          widgets = [];
+                          counter = 1;
+                        }
+                      });
+                    },
+                    child: const Text("reset data")),
               ],
             ),
             Column(
