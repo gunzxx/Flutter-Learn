@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
           children: [
             const Text("Hello 1"),
             const Text("Hello 2"),
-            const Text("Hello 3"),
+            Container(
+              child: Text("Hello 3"),
+              color: Colors.amberAccent,
+              padding: EdgeInsets.only(left: 10),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.start,
