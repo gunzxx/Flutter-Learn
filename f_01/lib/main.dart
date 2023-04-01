@@ -9,22 +9,14 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-const Text title = Text("Statefull");
+const Text title = Text("Anonymous Method");
 
 class _MyAppState extends State<MyApp> {
-  int number = 1;
-  double ukuranFont = 20.0;
-  void tambahAngka() {
-    setState(() {
-      number++;
-      ukuranFont = ukuranFont + number.toDouble();
-    });
-  }
+  String message = 'Tombol belum ditekan';
 
-  void resetAngka() {
+  void tekanTombol() {
     setState(() {
-      number = 1;
-      ukuranFont = 20.0;
+      message = "Tombol sudah ditekan";
     });
   }
 
@@ -43,30 +35,16 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
             children: [
-              Text("Ukuran font = $ukuranFont"),
-              Text(
-                number.toString(),
-                style: TextStyle(fontSize: ukuranFont),
-              ),
+              Text(message),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black54,
-                  padding: EdgeInsets.all(20),
-                ),
-                onPressed: tambahAngka,
-                child: Text("Tambah"),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                  padding: EdgeInsets.all(20),
-                ),
-                onPressed: resetAngka,
-                child: Text("Reset"),
-              ),
+                onPressed: () {
+                  setState(() {
+                    message = "Tombol sudah ditekan";
+                  });
+                },
+                child: Text("Push here"),
+              )
             ],
           ),
         ),
