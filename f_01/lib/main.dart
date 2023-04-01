@@ -2,41 +2,72 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+const Text title = Text("Statefull");
+
+class _MyAppState extends State<MyApp> {
+  int number = 1;
+  double ukuranFont = 20.0;
+  void tambahAngka() {
+    setState(() {
+      number++;
+      ukuranFont = ukuranFont + number.toDouble();
+    });
+  }
+
+  void resetAngka() {
+    setState(() {
+      number = 1;
+      ukuranFont = 20.0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // theme: ThemeData(
+      //     colorScheme: ColorScheme.fromSwatch(
+      //   primarySwatch: Colors.black,
+      // )),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Latihan row column"),
+          title: title,
         ),
-        body: Container(
-          color: Colors.amber,
-          margin: const EdgeInsets.all(10),
-          // padding: EdgeInsets.only(left: 20, right: 15,bottom:25),
-          padding: const EdgeInsets.fromLTRB(15, 20, 25, 30),
-          child: Container(
-            // color: Colors.red,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text("Ukuran font = $ukuranFont"),
+              Text(
+                number.toString(),
+                style: TextStyle(fontSize: ukuranFont),
               ),
-              gradient: LinearGradient(
-                // begin: Alignment.topLeft,
-                // end: Alignment.bottomRight,
-                begin: Alignment(-1, 1),
-                end: Alignment(1, -1),
-                colors: <Color>[
-                  Colors.blue,
-                  Colors.green,
-                ],
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black54,
+                  padding: EdgeInsets.all(20),
+                ),
+                onPressed: tambahAngka,
+                child: Text("Tambah"),
               ),
-              // color: Colors.red,
-            ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  padding: EdgeInsets.all(20),
+                ),
+                onPressed: resetAngka,
+                child: Text("Reset"),
+              ),
+            ],
           ),
         ),
       ),
