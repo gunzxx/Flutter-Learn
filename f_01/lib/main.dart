@@ -39,8 +39,8 @@ class _MyAppState extends State<MyApp> {
         extendBody: true,
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          child: Icon(Icons.message),
           backgroundColor: const Color(0xFF018269),
+          child: const Icon(Icons.message),
         ),
         appBar: AppBar(
           toolbarHeight: kToolbarHeight + .3,
