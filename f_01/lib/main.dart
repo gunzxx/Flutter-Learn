@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-const String title = "Text Style";
-
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+const Text title = Text("List dan ListView");
+
+class _MyAppState extends State<MyApp> {
+  List<Widget> widgets = [];
+  int counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -13,30 +21,39 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          // titleTextStyle: TextStyle(
-          //     // fontFamily: "Poppins",
-          //     // fontSize: 24,
-          //     // fontWeight: FontWeight.w500,
-          //     ),
-          title: Text(title),
+          title: title,
         ),
-        body: Center(
-          child: Text(
-            "Ini adalah text",
-            style: TextStyle(
-              fontFamily: "Poppins",
-              fontWeight: FontWeight.bold,
-              fontSize: 32,
-              fontStyle: FontStyle.italic,
-              decoration: TextDecoration.combine([
-                TextDecoration.overline,
-                TextDecoration.underline,
-              ]),
-              decorationColor: Colors.grey,
-              decorationThickness: 5,
-              decorationStyle: TextDecorationStyle.wavy,
+        body: ListView(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        widgets.add(Text("Data $counter",
+                            style: const TextStyle(fontSize: 32)));
+                        counter++;
+                      });
+                    },
+                    child: const Text("tambah data")),
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        if (widgets.isNotEmpty) {
+                          widgets.removeLast();
+                          counter--;
+                        }
+                      });
+                    },
+                    child: const Text("hapus data")),
+              ],
             ),
-          ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: widgets,
+            ),
+          ],
         ),
       ),
     );

@@ -16,10 +16,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //     colorScheme: ColorScheme.fromSwatch(
-      //   primarySwatch: Colors.black,
-      // )),
       home: Scaffold(
         appBar: AppBar(
           title: title,
