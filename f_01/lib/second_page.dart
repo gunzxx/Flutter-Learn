@@ -32,7 +32,8 @@ class SecondPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: const [
                     Text("Back"),
-                    Icon(Icons.login),
+                    SizedBox(width: 3),
+                    Icon(Icons.skip_previous),
                   ],
                 ),
                 onPressed: () {
