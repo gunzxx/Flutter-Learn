@@ -19,13 +19,27 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Text Field")),
+        appBar: AppBar(title: const Text("Text Field")),
         body: Container(
-          margin: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TextField(
+                decoration: InputDecoration(
+                  icon: Icon(Icons.add),
+                  prefixIcon: const Icon(Icons.person),
+                  // prefix: Container(width: 5, height: 5, color: Colors.red),
+                  prefixText: "Name : ",
+                  prefixStyle: TextStyle(color: Colors.blue),
+                  labelText: "Hello",
+                  hintText: "Ini place holder",
+                  suffixIcon: const Icon(Icons.person),
+                  fillColor: Colors.lightBlue.shade50,
+                  filled: true,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                ),
                 controller: controller,
                 onChanged: (value) {
                   setState(() {});
@@ -36,15 +50,15 @@ class _MyAppState extends State<MyApp> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.yellow,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, .7),
                         offset: Offset(0, 0),
                         blurRadius: 10,
                       )
                     ]),
-                padding:
-                    EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+                padding: const EdgeInsets.only(
+                    top: 10, bottom: 10, left: 20, right: 20),
                 child: Text(controller.text),
               ),
             ],
