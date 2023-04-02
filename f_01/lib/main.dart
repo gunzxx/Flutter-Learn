@@ -23,90 +23,28 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF018269),
-          title: const Text("Latihan stack dan align"),
+          title: const Text("Latihan image"),
           elevation: 0.0,
         ),
-        body: Stack(
-          children: [
-            Column(
-              children: [
-                Flexible(
-                  flex: 1,
-                  child: Row(
-                    children: [
-                      Flexible(flex: 1, child: Container(color: Colors.blue)),
-                      Flexible(flex: 1, child: Container(color: Colors.white)),
-                    ],
-                  ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: Row(
-                    children: [
-                      Flexible(flex: 1, child: Container(color: Colors.white)),
-                      Flexible(flex: 1, child: Container(color: Colors.blue)),
-                    ],
-                  ),
-                ),
-              ],
+        body: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            padding: EdgeInsets.all(5),
+            color: Colors.green,
+            child: const Image(
+              // width: 100,
+              // None : ukuran gambar asli, tidak disesuaikan
+              // Contain : menyesuaikan seluruh gambar dengan tinggi dan lebar yang proporsional
+              // Cover : ukuran tetap proporsional, tapi tanpa ada sisa ruang kosong
+              // Fill : ukuran tidak proporsional, tapi tanpa ada sisa ruang kosong
+              fit: BoxFit.contain,
+              repeat: ImageRepeat.repeat,
+              alignment: Alignment.centerLeft,
+              // image: NetworkImage("https://variety.com/wp-content/uploads/2022/03/MCDTRAG_EC024.jpg")),
+              image: AssetImage("img/doge.jpg"),
             ),
-            ListView(
-              children: [
-                Column(
-                  children: const [
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                    Text("Ini adalah teks layer 2",
-                        style: TextStyle(fontSize: 30)),
-                  ],
-                ),
-              ],
-            ),
-            Align(
-              alignment: Alignment(.9, .9),
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
-                ),
-                child: Icon(Icons.message),
-              ),
-            )
-          ],
+          ),
         ),
       ),
     );
