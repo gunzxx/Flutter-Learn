@@ -27,11 +27,11 @@ class _MyAppState extends State<MyApp> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.add),
                   prefixIcon: const Icon(Icons.person),
                   // prefix: Container(width: 5, height: 5, color: Colors.red),
                   prefixText: "Name : ",
-                  prefixStyle: TextStyle(color: Colors.blue),
+                  prefixStyle: const TextStyle(color: Colors.blue),
                   labelText: "Hello",
                   hintText: "Ini place holder",
                   suffixIcon: const Icon(Icons.person),
