@@ -5,42 +5,51 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.green,
-        appBar: AppBar(
-          backgroundColor: Color(0xFF1b1e23),
-          title: Text("Card widget"),
-        ),
+        appBar: AppBar(title: Text("Text Field")),
         body: Container(
-          margin: EdgeInsets.all(10),
-          child: ListView(
+          margin: EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              buildCard(Icons.account_box, "Account Box"),
-              buildCard(Icons.adb, "Serangga android"),
+              TextField(
+                controller: controller,
+                onChanged: (value) {
+                  setState(() {});
+                },
+                // obscureText: true,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.yellow,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, .7),
+                        offset: Offset(0, 0),
+                        blurRadius: 10,
+                      )
+                    ]),
+                padding:
+                    EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+                child: Text(controller.text),
+              ),
             ],
           ),
         ),
-      ),
-    );
-  }
-
-  Card buildCard(IconData iconData, String teksBox) {
-    return Card(
-      child: Row(
-        children: [
-          Container(
-            margin: EdgeInsets.all(5),
-            child: Icon(iconData),
-          ),
-          Text(teksBox),
-        ],
       ),
     );
   }
