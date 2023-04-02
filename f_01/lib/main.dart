@@ -23,53 +23,89 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF018269),
-          title: const Text("Latihan flexible layout"),
+          title: const Text("Latihan stack dan align"),
           elevation: 0.0,
         ),
-        body: Column(
+        body: Stack(
           children: [
-            Flexible(
-              flex: 1,
-              child: Row(
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      color: Colors.red,
-                    ),
+            Column(
+              children: [
+                Flexible(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      Flexible(flex: 1, child: Container(color: Colors.blue)),
+                      Flexible(flex: 1, child: Container(color: Colors.white)),
+                    ],
                   ),
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      color: Colors.yellow,
-                    ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      Flexible(flex: 1, child: Container(color: Colors.white)),
+                      Flexible(flex: 1, child: Container(color: Colors.blue)),
+                    ],
                   ),
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Flexible(
-              flex: 2,
-              child: Container(
-                margin: EdgeInsets.all(5),
-                color: Colors.green,
-              ),
+            ListView(
+              children: [
+                Column(
+                  children: const [
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                    Text("Ini adalah teks layer 2",
+                        style: TextStyle(fontSize: 30)),
+                  ],
+                ),
+              ],
             ),
-            Flexible(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.all(5),
-                color: Colors.blue,
+            Align(
+              alignment: Alignment(.9, .9),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                ),
+                child: Icon(Icons.message),
               ),
-            ),
+            )
           ],
         ),
       ),
