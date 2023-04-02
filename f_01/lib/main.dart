@@ -23,24 +23,49 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xFF018269),
-          title: const Text("Latihan animated container"),
+          title: const Text("Latihan flexible layout"),
           elevation: 0.0,
         ),
-        body: Center(
-          child: GestureDetector(
-            onTap: () {
-              setState(() {});
-            },
-            child: AnimatedContainer(
-              color: const Color.fromRGBO(0, 0, 0, .7),
-              duration: const Duration(milliseconds: 300),
-              width: 50.0 + random.nextInt(101),
-              height: 50.0 + random.nextInt(101),
-              child: const Center(
-                child: Text("OK"),
+        body: Column(
+          children: [
+            Flexible(
+              flex: 1,
+              child: Row(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.yellow,
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                color: Colors.green,
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Container(
+                color: Colors.blue,
+              ),
+            ),
+          ],
         ),
       ),
     );
