@@ -35,18 +35,21 @@ class _MyAppState extends State<MyApp> {
                   Flexible(
                     flex: 1,
                     child: Container(
+                      margin: EdgeInsets.all(5),
                       color: Colors.red,
                     ),
                   ),
                   Flexible(
                     flex: 1,
                     child: Container(
+                      margin: EdgeInsets.all(5),
                       color: Colors.yellow,
                     ),
                   ),
                   Flexible(
                     flex: 1,
                     child: Container(
+                      margin: EdgeInsets.all(5),
                       color: Colors.grey,
                     ),
                   ),
@@ -56,12 +59,14 @@ class _MyAppState extends State<MyApp> {
             Flexible(
               flex: 2,
               child: Container(
+                margin: EdgeInsets.all(5),
                 color: Colors.green,
               ),
             ),
             Flexible(
               flex: 1,
               child: Container(
+                margin: EdgeInsets.all(5),
                 color: Colors.blue,
               ),
             ),
