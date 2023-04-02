@@ -50,6 +50,8 @@ class _MyAppState extends State<MyApp> {
                     ),
                   ),
                   childWhenDragging: const SizedBox(
+                    height: 0,
+                    width: 0,
                     child: Material(
                       shape: StadiumBorder(),
                       elevation: 0,
