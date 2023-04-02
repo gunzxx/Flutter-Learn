@@ -10,9 +10,41 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Color(0xFF1b1e23),
+            leading: Icon(
+              Icons.adb,
+              color: Colors.white,
+            ),
+            title: Text("App Bar Example"),
+            actions: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.exit_to_app)),
+            ],
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF0096ff),
+                    Color(0xFF6610f2),
+                  ],
+                  begin: FractionalOffset.topLeft,
+                  end: FractionalOffset.bottomRight,
+                ),
+                image: DecorationImage(
+                  image: AssetImage("img/pattern.png"),
+                  fit: BoxFit.cover,
+                  repeat: ImageRepeat.repeat,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
