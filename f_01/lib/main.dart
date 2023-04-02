@@ -27,23 +27,17 @@ class _MyAppState extends State<MyApp> {
           elevation: 0.0,
         ),
         body: Center(
-          child: Container(
-            width: 100,
-            height: 100,
-            padding: EdgeInsets.all(5),
-            color: Colors.green,
-            child: const Image(
-              // width: 100,
-              // None : ukuran gambar asli, tidak disesuaikan
-              // Contain : menyesuaikan seluruh gambar dengan tinggi dan lebar yang proporsional
-              // Cover : ukuran tetap proporsional, tapi tanpa ada sisa ruang kosong
-              // Fill : ukuran tidak proporsional, tapi tanpa ada sisa ruang kosong
-              fit: BoxFit.contain,
-              repeat: ImageRepeat.repeat,
-              alignment: Alignment.centerLeft,
-              // image: NetworkImage("https://variety.com/wp-content/uploads/2022/03/MCDTRAG_EC024.jpg")),
-              image: AssetImage("img/doge.jpg"),
-            ),
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Spacer(),
+              Container(width: 80, height: 80, color: Colors.red),
+              const Spacer(),
+              Container(width: 80, height: 80, color: Colors.green),
+              const Spacer(flex: 2),
+              Container(width: 80, height: 80, color: Colors.blue),
+              const Spacer(flex: 3),
+            ],
           ),
         ),
       ),
