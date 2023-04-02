@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
                     width: 50,
                     height: 50,
                     child: Material(
-                      color: c1.withOpacity(.5),
+                      color: c2.withOpacity(.5),
                       shape: const StadiumBorder(),
                       elevation: 3,
                     ),
@@ -100,7 +100,7 @@ class _MyAppState extends State<MyApp> {
                     width: 50,
                     height: 50,
                     child: Material(
-                      color: c1.withOpacity(.5),
+                      color: c3.withOpacity(.5),
                       shape: const StadiumBorder(),
                       elevation: 3,
                     ),
