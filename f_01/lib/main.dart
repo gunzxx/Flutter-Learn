@@ -171,605 +171,82 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Grup 1",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.done_all,
-                              size: 20,
-                              color: Colors.grey,
-                            ),
-                            SizedBox(width: 3),
-                            Text(
-                              "Anda: P",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 1",
+                textChat: "P",
+                sender: "Anda",
+                checked: true,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Chat 1",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.done_all,
-                              size: 20,
-                              color: Colors.blue,
-                            ),
-                            SizedBox(width: 3),
-                            Text(
-                              "Anda: Halo guys!",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 2",
+                textChat: "Halo",
+                sender: "Anda",
+                checked: true,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Chat 2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.done_all,
-                              size: 20,
-                              color: Colors.blue,
-                            ),
-                            SizedBox(width: 3),
-                            Text(
-                              "Anda: Halo guys!",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 3",
+                textChat: "Halo",
+                sender: "Bayu",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Guntur",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.done_all,
-                              size: 20,
-                              color: Colors.blue,
-                            ),
-                            SizedBox(width: 3),
-                            Text(
-                              "Anda: Halo tur!",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Anjayy",
+                textChat: "Halo",
+                sender: "Bayu",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Chat 3",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.done_all,
-                              size: 20,
-                              color: Colors.grey,
-                            ),
-                            SizedBox(width: 3),
-                            Text(
-                              "Anda: Halo world!",
-                              style: TextStyle(
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Group 4",
+                textChat: "Halo",
+                sender: "Farhan",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Bayu: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Wakil rakyat",
+                textChat: "Waktunya farming",
+                sender: "********",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 3",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Farhan: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Presiden",
+                textChat: "Jangan lupa sholat",
+                sender: "Jokowi",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 4",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Bayu: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 5",
+                textChat: "asdsasadsasa",
+                sender: "ASD",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 5",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Farhan: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 6",
+                textChat: "asdsasadsasa",
+                sender: "ASD",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 6",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Bayu: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 7",
+                textChat: "asdsasadsasa",
+                sender: "ASD",
+                checked: false,
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  bottom: 5,
-                ),
-                height: 60,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 80,
-                      height: 60,
-                      child: Center(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                            image: const DecorationImage(
-                              image: AssetImage('img/meme.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Grup 7",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          "Farhan: Halo guys!",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+              const ChatWa(
+                img: "meme.jpg",
+                titleChat: "Grup 8",
+                textChat: "asdsasadsasa",
+                sender: "ASD",
+                checked: false,
               ),
             ],
           ),
@@ -777,4 +254,90 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+}
+
+class ChatWa extends StatelessWidget {
+  final String img, titleChat, textChat, sender;
+  final bool checked;
+  const ChatWa({
+    super.key,
+    required this.img,
+    required this.titleChat,
+    required this.textChat,
+    required this.sender,
+    this.checked = true,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 5,
+        bottom: 5,
+      ),
+      height: 60,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 80,
+            height: 60,
+            child: Center(
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(50),
+                  image: DecorationImage(
+                    image: AssetImage("img/$img"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                titleChat,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+              Row(
+                children: [
+                  checkChecked(checked),
+                  Text(
+                    "$sender: $textChat",
+                    style: const TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+Row checkChecked(bool checked) {
+  if (checked == true) {
+    return Row(
+      children: const [
+        Icon(Icons.done_all, size: 20, color: Colors.grey),
+        SizedBox(width: 3),
+      ],
+    );
+  }
+  return Row(
+    children: const [],
+  );
 }
