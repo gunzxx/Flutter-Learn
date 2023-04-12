@@ -34,25 +34,25 @@ class _InputScreenState extends State<InputScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Input Screen'),
+        title: const Text('Input Screen'),
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              Flexible(
+              const Flexible(
                 flex: 1,
                 child: Center(
-                  child: Text("Data kembalian = $nama"),
+                  child: Text("Selamat datang!"),
                 ),
               ),
               Flexible(
                 flex: 1,
                 child: TextField(
                   controller: _namaController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Nama',
                   ),
@@ -61,7 +61,7 @@ class _InputScreenState extends State<InputScreen> {
               Flexible(
                 flex: 1,
                 child: ElevatedButton(
-                  child: Text('Lanjut'),
+                  child: const Text('Lanjut'),
                   onPressed: () {
                     nama = _namaController.text.trim();
                     Navigator.push(
@@ -90,7 +90,7 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Screen', style: TextStyle()),
+        title: const Text('Detail Screen', style: TextStyle()),
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +99,7 @@ class DetailScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Data yang dikirim = $nama'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
@@ -111,7 +111,7 @@ class DetailScreen extends StatelessWidget {
                           ),
                         ),
                       },
-                  child: Text("back"))
+                  child: const Text("back"))
             ],
           )
         ],

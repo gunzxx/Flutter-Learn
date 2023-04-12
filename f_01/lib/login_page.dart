@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("01 - Berpindah layar tanpa data"),
+        title: const Text("PBM"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
             child: Container(
                 // color: Colors.red,
                 alignment: Alignment.center,
-                child: const Text("Login Page",
+                child: const Text("Tugas 2",
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
