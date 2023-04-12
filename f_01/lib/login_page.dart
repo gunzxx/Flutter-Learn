@@ -1,5 +1,4 @@
 import 'package:f_01/home_page.dart';
-import 'package:f_01/main.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -9,7 +8,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Latihan Multi Page"),
+        title: const Text("01 - Berpindah layar tanpa data"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +22,19 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                      fontSize: 18,
+                    ))),
+          ),
+          Flexible(
+            flex: 1,
+            child: Container(
+                // color: Colors.red,
+                alignment: Alignment.center,
+                child: const Text("Welcome to Kelompok 3",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28,
                     ))),
           ),
           Flexible(
@@ -40,7 +51,7 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return const HomePage();
+                    return HomePage();
                   }));
                 },
               ),
