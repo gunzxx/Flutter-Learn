@@ -1,66 +1,58 @@
-// import 'dart:math';
-
-// import 'package:f_01/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text("Text Field")),
-        body: Container(
-          margin: const EdgeInsets.all(20),
+        appBar: AppBar(
+          title: const Text("Latihan InkWell"),
+        ),
+        body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  icon: const Icon(Icons.add),
-                  prefixIcon: const Icon(Icons.person),
-                  // prefix: Container(width: 5, height: 5, color: Colors.red),
-                  prefixText: "Name : ",
-                  prefixStyle: const TextStyle(color: Colors.blue),
-                  labelText: "Hello",
-                  hintText: "Ini place holder",
-                  suffixIcon: const Icon(Icons.person),
-                  fillColor: Colors.lightBlue.shade50,
-                  filled: true,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                controller: controller,
-                onChanged: (value) {
-                  setState(() {});
-                },
-                // obscureText: true,
+              ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.amber),
+                    shape: MaterialStatePropertyAll(StadiumBorder())),
+                onPressed: () {},
+                child: Text("Button 1"),
               ),
-              Container(
-                decoration: BoxDecoration(
+              Material(
+                borderRadius: BorderRadius.circular(20),
+                // elevation: 2,
+                child: Container(
+                  width: 150,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: LinearGradient(
+                          colors: [Colors.purple, Colors.pink],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight)),
+                  child: Material(
+                    elevation: 4,
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.yellow,
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color.fromRGBO(0, 0, 0, .7),
-                        offset: Offset(0, 0),
-                        blurRadius: 10,
-                      )
-                    ]),
-                padding: const EdgeInsets.only(
-                    top: 10, bottom: 10, left: 20, right: 20),
-                child: Text(controller.text),
-              ),
+                    color: Colors.transparent,
+                    child: InkWell(
+                      splashColor: Colors.amber,
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () {},
+                      child: Center(
+                          child: Text(
+                        "Button 2",
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w600),
+                      )),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
